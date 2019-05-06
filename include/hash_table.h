@@ -7,6 +7,7 @@ class hash_table : public Tables{
     private:
         std::vector <std::vector <std::pair<std::string, Polinom> > > un;
         int s_size;
+    l   long long hash_func (std::string s);
     public:    
         hash_table(int _size = 0) {
             size = _size;
@@ -15,7 +16,6 @@ class hash_table : public Tables{
         };
         ~hash_table() {};
         int getsize();
-        long long hash_func (std::string s);
         void inserts (std::string name, Polinom a) override;
         void erases (std::string name) override;
         Polinom finds (std::string name) override;

@@ -5,15 +5,15 @@
 
 class sorted_table : public Tables{
     private:
-        std::vector <std::pair<std::string, Polinom> > un;  
+        std::vector <std::pair<std::string, Polinom> > un;
+        bool compare (std::string s, std::string s1);
+        int upper_bounds (std::string key);
     public:    
         sorted_table() {};
         sorted_table(int _size) {};
         ~sorted_table() {};
         int getsize();
-        bool compare (std::string s, std::string s1);
         void inserts (std::string name, Polinom a) override;
-        int upper_bounds (std::string key);
         void erases (std::string name) override;
         Polinom finds (std::string name) override;
         int p_count() override;

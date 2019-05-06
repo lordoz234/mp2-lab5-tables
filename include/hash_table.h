@@ -7,7 +7,7 @@ class hash_table : public Tables{
     private:
         std::vector <std::vector <std::pair<std::string, Polinom> > > un;
         int s_size;
-    l   long long hash_func (std::string s);
+        long long hash_func (std::string s);
     public:    
         hash_table(int _size = 0) {
             size = _size;
